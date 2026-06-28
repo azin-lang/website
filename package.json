@@ -37,5 +37,9 @@
 		"typescript-eslint": "^8.60.1",
 		"vite": "^8.0.16",
 		"wrangler": "^4.97.0"
+	},
+	"dependencies": {
+		"highlight.js": "^11.11.1",
+		"marked": "^18.0.5"
 	}
 }

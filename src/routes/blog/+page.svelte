@@ -1,38 +1,51 @@
+<script lang="ts">
+	import type { PageData } from './$types';
+
+	let { data }: { data: PageData } = $props();
+
+	const cardSpeedAnimation = 0.25;
+</script>
+
 <svelte:head>
-	<title>Azin</title>
+	<title>Blog • Azin</title>
 	<meta
 		name="description"
-		content="A modern systems programming language. (In Development)"
+		content="Development logs, compiler updates, and articles from the Azin project."
 	/>
 </svelte:head>
-
-<script lang="ts">
-	const year = new Date().getFullYear();
-</script>
 
 <div class="page">
 	<main class="hero">
 		<h1>
-			<span class="accent">A</span>zin
+			<span class="accent">B</span>log
 		</h1>
 
 		<p class="description">
-			A modern systems programming language currently in development.
+			Development logs, compiler updates, design decisions, and everything happening around
+			the Azin language.
 		</p>
 
-		<div class="construction">
-			<h2>Blog Under Construction</h2>
+		<div class="grid">
+			{#each data.posts as post, i}
+				<a
+					class="card"
+					href="/blog/{post.slug}"
+					style={`animation-delay: ${i * cardSpeedAnimation}s`}
+				>
+					<div class="meta">
+						{#if post.publishedLabel}
+							<span>{post.publishedLabel}</span>
+							<span>•</span>
+						{/if}
+						<span>{post.readTime}</span>
+					</div>
 
-			<p>
-				The azin blog is currently under construction.
-				News and updates will be available soon.
-			</p>
+					<h2>{post.title}</h2>
+					<p>{post.excerpt}</p>
+				</a>
+			{/each}
 		</div>
 	</main>
-
-	<footer>
-		© {year} Azin Language Project
-	</footer>
 </div>
 
 <style>
@@ -58,18 +71,16 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		justify-content: center;
+		padding: 4rem 2rem;
 		text-align: center;
-		padding: 2rem;
 		animation: fadeIn 0.25s ease-out;
 	}
 
 	h1 {
 		margin: 0;
-		font-size: clamp(4.5rem, 10vw, 7rem);
+		font-size: clamp(4rem, 9vw, 6.5rem);
 		font-weight: 900;
 		letter-spacing: -0.05em;
-		line-height: 1;
 	}
 
 	.accent {
@@ -77,55 +88,89 @@
 	}
 
 	.description {
-		margin-top: 2rem;
-		max-width: 600px;
-		font-size: 1.25rem;
+		margin-top: 1.5rem;
+		max-width: 650px;
+		font-size: 1.2rem;
+		color: #a1a1aa;
 		line-height: 1.7;
-		color: #d4d4d8;
-		animation: fadeIn 0.5s ease-out;
+		animation: fadeIn 0.25s ease-out;
 	}
 
-	footer {
-		padding: 2rem;
-		text-align: center;
-		font-size: 0.9rem;
-		color: #52525b;
+	.grid {
+		margin-top: 4rem;
+		width: min(900px, 100%);
+		display: grid;
+		gap: 1.25rem;
+		animation: fadeIn 0.5s ease-out forwards;
 	}
 
-    .construction {
-        margin-top: 3.5rem;
-        max-width: 640px;
-        width: 100%;
-        padding: 2rem;
-        border: 1px solid #27272a;
-        border-radius: 14px;
-        background: #0d0d10;
-		animation: fadeIn 0.75s ease-out;
-    }
+	.card {
+		opacity: 0;
+		display: block;
+		text-align: left;
+		text-decoration: none;
+		padding: 1.5rem;
+		border-radius: 14px;
+		border: 1px solid #27272a;
+		background: #0d0d10;
+		color: inherit;
 
-    .construction h2 {
-        margin: 0;
-        font-size: 1.4rem;
-        font-weight: 700;
-        letter-spacing: -0.02em;
-        color: white;
-    }
+		transition:
+			border-color .2s,
+			background .2s,
+			transform .2s;
 
-    .construction p {
-        margin: 1rem 0 0;
-        color: #a1a1aa;
-        line-height: 1.7;
-        font-size: 1rem;
-    }
+		animation: fadeInCard 0.5s ease-out forwards;
+	}
+
+	.card:hover {
+		border-color: #38bdf8;
+		background: #111114;
+		transform: translateY(-2px);
+	}
+
+	.meta {
+		display: flex;
+		gap: .45rem;
+		font-size: .8rem;
+		font-weight: 600;
+		color: #71717a;
+		text-transform: uppercase;
+		letter-spacing: .08em;
+	}
+
+	.card h2 {
+		margin: .85rem 0 .65rem;
+		font-size: 1.35rem;
+		color: white;
+		line-height: 1.3;
+	}
+
+	.card p {
+		margin: 0;
+		color: #a1a1aa;
+		line-height: 1.6;
+	}
 
 	@keyframes fadeIn {
-        from {
-            opacity: 0;
-            transform: translateY(12px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }	
+		from {
+			opacity: 0;
+			transform: translateY(12px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	@keyframes fadeInCard {
+		from {
+			opacity: 0;
+			transform: translateY(12px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
 </style>
