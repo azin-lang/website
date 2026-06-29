@@ -25,6 +25,16 @@
 			description: 'The official Azin Discord server',
 			url: 'https://discord.gg/HVhCevjAxR'
 		},
+		{
+			title: 'Founders',
+			description: 'Meet the people who founded and maintain the Azin project.',
+			url: '/links/founders'
+		},
+		{
+			title: 'Contributors',
+			description: 'Everyone who has contributed to Azin.',
+			url: 'https://github.com/azin-lang/Azin/graphs/contributors?from=3%2F28%2F2026'
+		}
 	];
 </script>
 
