@@ -1,6 +1,6 @@
 ---
 website:
-github: https://github.com/just.another.alien
+github: https://github.com/just-another-alien
 ---
 
 # Under construction
