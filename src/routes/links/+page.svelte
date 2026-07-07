@@ -28,7 +28,7 @@
 		{
 			title: 'Founders',
 			description: 'Meet the people who founded and maintain the Azin project.',
-			url: '/links/founders'
+			url: '/founders'
 		},
 		{
 			title: 'Contributors',

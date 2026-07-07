@@ -28,7 +28,7 @@
 			{#each founders as founder, i}
 				<a
 					class="card"
-					href={`/links/founders/${founder.id}`}
+					href={`/founders/${founder.id}`}
 					style={`animation-delay: ${i * 0.1}s`}
 				>
 					<img
