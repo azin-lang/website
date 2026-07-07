@@ -37,7 +37,7 @@
 	<section class="features">
 		<div class="card">
 			<div class="icon">⚡</div>
-			<h3>Performance</h3>
+			<h3>Performant</h3>
 			<p>
 				Azin is designed with zero-cost abstractions, predictable performance,
 				and efficient native code generation in mind.
