@@ -2,7 +2,7 @@
 title: Did development stop?
 excerpt: Where's the parser? Did development stop?
 read_time: 2
-published_at: 2026-07-7
+published_at: 2026-07-07
 draft: false
 authors: spatulari
 ---
