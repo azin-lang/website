@@ -21,15 +21,14 @@ far and how the new codebase is structured.
 ## Layout of the New Compiler
 We are leveraging Go's strict package boundaries to
 ensure the compiler remains highly modular from day one. Instead of a monolithic layout, each distinct phase of the compilation process lives in its own
-isolated package under `internal/`: *
-**`cmd/compiler`**: The main entry point. It handles
-CLI flags, manages the overall compilation workflow,
-and prints debugging metadata. * **`internal/fs`**:
+isolated package under `internal/`.
+**`cmd/compiler`**: The main entry point. It handles CLI flags, manages the overall compilation workflow, and prints debugging metadata.
+**`internal/fs`**:
 Dedicated to robust file system operations,
 including strict verification of the `.az` file
 extension. * **`internal/lexer`**: The tokenizer
 phase. It ingests raw source bytes and converts them
-into structured token streams. *
+into structured token streams.
 **`internal/diagnostics`**: The central
 error-reporting hub designed to handle pipeline
 failures gracefully rather than relying on unhandled
@@ -42,11 +41,10 @@ already introduced a completely overhauled GitHub
 Actions CI workflow that automatically handles the
 heavy lifting across Linux, macOS, and Windows: *
 **Automated Linting and Formatting**: Code
-formatting verification is strictly enforced via
-`go fmt` to keep the codebase pristine across all
-contributors. * **Static Verification**: Integrated
+formatting verification is strictly enforced via `go fmt` to keep the codebase pristine across all contributors.
+ **Static Verification**: Integrated
 `go vet` and test pipelines to catch syntax errors
-or typing mismatches instantly on every push. *
+or typing mismatches instantly on every push.
 **Cross-Platform Delivery**: Compiling native `azc`
 binaries smoothly across entirely different
 operating system targets.
