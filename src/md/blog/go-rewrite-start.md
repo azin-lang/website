@@ -13,16 +13,14 @@ bootstrap compiler in Go. The repository has been
 restructured, the first modules are landing, and the
 foundations of the new architecture are taking
 shape. Our singular focus right now is
-velocity—building a clean, maintainable pipeline so
+velocity. building a clean, maintainable pipeline so
 we can get to a self-hosted compiler as efficiently
 as possible. Here is a look at what we’ve built so
 far and how the new codebase is structured.
 
 ## Layout of the New Compiler
 We are leveraging Go's strict package boundaries to
-ensure the compiler remains highly modular from day
-one. Instead of a monolithic layout, each distinct
-phase of the compilation process lives in its own
+ensure the compiler remains highly modular from day one. Instead of a monolithic layout, each distinct phase of the compilation process lives in its own
 isolated package under `internal/`: *
 **`cmd/compiler`**: The main entry point. It handles
 CLI flags, manages the overall compilation workflow,
@@ -45,7 +43,7 @@ Actions CI workflow that automatically handles the
 heavy lifting across Linux, macOS, and Windows: *
 **Automated Linting and Formatting**: Code
 formatting verification is strictly enforced via
-`gofmt` to keep the codebase pristine across all
+`go fmt` to keep the codebase pristine across all
 contributors. * **Static Verification**: Integrated
 `go vet` and test pipelines to catch syntax errors
 or typing mismatches instantly on every push. *
@@ -64,6 +62,4 @@ will cleanly pass down diagnostic states, making it
 incredibly accessible for new contributors to jump
 in and improve compiler messages.
 
-If you want to get your hands dirty with the new Go impleme>
-check out the repository, run `go test ./...`,
-or drop by the [Discord Server](https://discord.gg/CQYmqVPB>
+If you want to get your hands dirty with the new Go implementation, check out the repository, run `go test ./...`, or drop by the [Discord Server](https://discord.gg/CQYmqVPB)
