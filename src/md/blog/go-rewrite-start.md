@@ -26,7 +26,8 @@ isolated package under `internal/`.
 **`internal/fs`**:
 Dedicated to robust file system operations,
 including strict verification of the `.az` file
-extension. * **`internal/lexer`**: The tokenizer
+extension.
+ **`internal/lexer`**: The tokenizer
 phase. It ingests raw source bytes and converts them
 into structured token streams.
 **`internal/diagnostics`**: The central
@@ -39,10 +40,10 @@ One of our immediate wins with Go has been the
 integration of robust developer tooling. We have
 already introduced a completely overhauled GitHub
 Actions CI workflow that automatically handles the
-heavy lifting across Linux, macOS, and Windows: *
+heavy lifting across Linux, macOS, and Windows.
 **Automated Linting and Formatting**: Code
 formatting verification is strictly enforced via `go fmt` to keep the codebase pristine across all contributors.
- **Static Verification**: Integrated
+**Static Verification**: Integrated
 `go vet` and test pipelines to catch syntax errors
 or typing mismatches instantly on every push.
 **Cross-Platform Delivery**: Compiling native `azc`
