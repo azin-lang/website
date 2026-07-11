@@ -3,7 +3,7 @@ title: Beginning the Go Rewrite
 excerpt: The first lines of code have been written.
 read_time: 3
 published_at: 2026-07-11
-draft: true
+draft: false
 authors: twlve
 ---
 
