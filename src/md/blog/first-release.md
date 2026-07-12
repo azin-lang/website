@@ -11,9 +11,8 @@ Today marks the first public release of **Azin**.
 
 After months of designing the language, building the compiler, refining the syntax, and laying the groundwork for the project, **Azin 0.1.0** is now available as the first public preview release.
 
-This is an exciting milestone—not because the language is finished, but because it has reached the point where people can download it, write programs, compile them, and begin experimenting with the ideas behind Azin.
+This is an exciting milestone, not because the language is finished, but because it has reached the point where people can download it, write programs, compile them, and begin experimenting with the ideas behind Azin.
 
----
 
 ## What is Azin?
 
