@@ -1,4 +1,4 @@
-<svelte:head>
+implementedmplementedsvelte:head>
 	<title>Azin</title>
 	<meta
 		name="description"
@@ -80,8 +80,7 @@
 		<p>
 			Azin is not yet production-ready. The compiler, standard library,
 			documentation, and tooling are still in the early stages of development. At
-			the moment, only the lexer has been implemented. The language syntax is
-			currently being refined through discussions in the
+			the moment, we transpile to C, 0.1.0 has released, with a lot of core missing features you would expect to be there. 0.2.0 will release shortly and will be more complete. the language syntax is refined through discussions in the
 			<a href="https://azin-lang.org/discord" class="underline">Discord server</a>, after which work
 			on the parser will begin. Until then, features and syntax should be expected
 			to evolve.
