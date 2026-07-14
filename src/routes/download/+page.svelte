@@ -21,31 +21,12 @@
 		</p>
 
 		<div class="buttons">
-			<a href="/download/0.1.0" class="primary">Download Azin 0.1.0</a>
+			<a href="/download/0.2.0" class="primary">Download Azin 0.2.0</a>
 			<a href="/download/latest" class="secondary">Latest Release →</a>
 		</div>
 	</main>
 
 	<div class="divider"></div>
-
-	<section class="section">
-		<h2>Latest Release</h2>
-
-		<div class="release latest">
-			<div>
-				<h3>Azin 0.1.0</h3>
-				<p>
-					The first public preview of Azin, featuring the compiler, semantic
-					analysis, type inference, C interoperability and native C code generation.
-					C can then compile to any target.
-				</p>
-
-				<span>Released July 12, 2026</span>
-			</div>
-
-			<a href="/download/0.1.0" class="primary">View Release</a>
-		</div>
-	</section>
 
 	<section class="section">
 		<h2>Supported Platforms</h2>
@@ -73,6 +54,16 @@
 
 	<section class="section">
 		<h2>Release History</h2>
+
+		<a class="release" href="/download/0.2.0">
+			<div>
+				<h3>0.2.0</h3>
+				<p>First public preview release.</p>
+				<span>July 14, 2026</span>
+			</div>
+
+			<strong>View →</strong>
+		</a>
 
 		<a class="release" href="/download/0.1.0">
 			<div>
@@ -212,6 +203,8 @@ h1{
 	text-decoration:none;
 	color:white;
 	gap:2rem;
+
+	margin-bottom: 1rem;
 }
 
 .release h3,.card h3{
@@ -227,10 +220,6 @@ h1{
 .release span{
 	color:#71717a;
 	font-size:.9rem;
-}
-
-.latest{
-	margin-top:.5rem;
 }
 
 .icon{
