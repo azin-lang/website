@@ -21,7 +21,7 @@
 		</p>
 
 		<div class="buttons">
-			<a href="/download/0.2.0" class="primary">Download Azin 0.2.0</a>
+			<a href="/download/0.2.1" class="primary">Download Azin 0.2.1</a>
 			<a href="/download/latest" class="secondary">Latest Release →</a>
 		</div>
 	</main>
@@ -54,6 +54,16 @@
 
 	<section class="section">
 		<h2>Release History</h2>
+
+		<a class="release" href="/download/0.2.1">
+			<div>
+				<h3>0.2.1</h3>
+				<p>Maintenance release.</p>
+				<span>July 15, 2026</span>
+			</div>
+
+			<strong>View →</strong>
+		</a>
 
 		<a class="release" href="/download/0.2.0">
 			<div>
